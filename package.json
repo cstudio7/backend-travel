@@ -1,20 +1,38 @@
 {
-  "name": "last",
+  "name": "Travel_port_11",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "https://github.com/cstudio7/Travel_port_11.git",
+  "author": "Victor Godwin <conquerorsword36@yahoo.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel ./src --out-dir dist",
+    "start": "node ./dist/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
+    "db-migrate": "cross-env NODE_ENV=development npx sequelize db:migrate",
+    "db-undo-migration": "npx sequelize db:migrate:undo:all",
+    "db-seed-dev": "npx sequelize-cli db:seed:undo:all && npx sequelize db:seed:all"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1"
   },
-  "engines": {
-    "node": "*",
-    "npm": "*"
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "nodemon": "^2.0.2"
   }
 }
