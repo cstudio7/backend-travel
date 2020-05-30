@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel ./src --out-dir dist",
-    "start": "node ./dist/index.js",
+    "start": "babel-node ./dist/index.js",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
     "db-migrate": "cross-env NODE_ENV=development npx sequelize db:migrate",
     "db-undo-migration": "npx sequelize db:migrate:undo:all",
