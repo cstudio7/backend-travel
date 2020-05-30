@@ -7,7 +7,7 @@ const env = process.env.NODE_ENV || 'development';
 const config = configPath[env];
 
 const db = {};
-let sequelize;
+let sequelize
     if (process.env.DATABASE_URL) {
         // the application is executed on Heroku ... use the postgres database
         sequelize =new Sequelize(process.env.DATABASE_URL,
