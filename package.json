@@ -46,7 +46,7 @@
     "express-validator": "^6.5.0",
     "faker": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
-    "log4js": "^6.3.0",
+    "log4js": "^6.4.0",
     "moment": "^2.26.0",
     "node-mocks-http": "^1.8.1",
     "passport": "^0.4.1",
